@@ -1,5 +1,7 @@
 RepelWoreOffScript::
 	opentext
+	readmem wRepelType
+	getitemname STRING_BUFFER_3, USE_SCRIPT_VAR
 	writetext .RepelWoreOffText
 	waitbutton
 	closetext
@@ -13,7 +15,7 @@ UseAnotherRepelScript::
 	opentext
 	readmem wRepelType
 	getitemname STRING_BUFFER_3, USE_SCRIPT_VAR
-	writetext .text
+	writetext .UseAnotherRepelText
 	yesorno
 	iffalse .done
 	callasm DoItemEffect
@@ -21,6 +23,6 @@ UseAnotherRepelScript::
 	closetext
 	end
 
-.text:
+.UseAnotherRepelText:
 	text_far _UseAnotherRepelText
 	text_end

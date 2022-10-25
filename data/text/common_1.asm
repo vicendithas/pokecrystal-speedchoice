@@ -1301,15 +1301,17 @@ _BugCatchingContestIsOverText::
 	done
 
 _RepelWoreOffText::
-	text "REPEL's effect"
-	line "wore off."
+	text "@"
+	text_ram wStringBuffer3
+	text "'s"
+	line "effect wore off."
 	done
 	
 _UseAnotherRepelText::
 	text "@"
 	text_ram wStringBuffer3
-	text "'s effect"
-	line "wore off."
+	text "'s"
+	line "effect wore off."
 
 	para "Use another?"
 	done
